@@ -1,0 +1,26 @@
+# Build output and local tooling
+**/bin/
+**/obj/
+/artifacts/
+.vs/
+.idea/
+*.user
+*.suo
+*.pdb
+
+# Runtime logs, full-screen diagnostic captures, and previous profiles
+**/data/logs/
+**/data/diagnostics/
+**/data/backups/
+*.bak
+*.tmp
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+hosts.yml

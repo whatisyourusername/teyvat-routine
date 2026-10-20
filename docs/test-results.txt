@@ -1,0 +1,174 @@
+PASS  F1-F24 and Escape record, save, reload and replay with matched releases
+PASS  Navigation, punctuation, numpad operators and extended keys are recorded
+PASS  Only recorder chords are excluded; plain and modified function keys remain
+PASS  Native F1-F12 and Escape replay packets contain scan codes without sending input
+PASS  Focus pause preserves input, balances held controls, and freezes duration
+PASS  Alt Tab stops recording before the window-switch shortcut is saved
+PASS  Manual save after switching windows persists input and existing screens
+PASS  Direct stop also releases held controls exactly once
+PASS  Reset clears only the selected registration and preserves settings
+PASS  Recording after screen registration preserves both checkpoints
+PASS  03 goes directly to 05; exactly 3 battles, 3 rewards and 2 retries before 09
+PASS  Legacy 04 data survives reload but cannot run; optional 08 remains after the last reward
+PASS  Optional groups and quit preserve dependencies
+PASS  Individual step selection preserves order and skips unselected registration
+PASS  Legacy partial repeat selection enables one complete group; all-off means no work
+PASS  Step selections persist and old group settings retain their meaning
+PASS  One through ten rounds have exactly N battles and rewards and N minus one retries
+PASS  Left task rows are numbered 1 to 9 and group edits preserve original segment objects
+PASS  Repeat count persists, absent old property defaults to three, invalid values are rejected
+PASS  Uncalibrated default cannot run
+PASS  Fully registered profile validates
+PASS  Different client resolutions rejected
+PASS  Unbalanced keyboard and unsafe input rejected
+PASS  Non-finite and outside coordinates rejected
+PASS  Image match: exact and translated patch
+PASS  Image match rejects unrelated and blank captures
+PASS  Engine executes full queue and only verified rewards count
+PASS  Precondition mismatch sends zero input
+PASS  Postcondition mismatch does not count reward or advance
+PASS  Cancellation releases held inputs promptly
+PASS  Focus loss aborts remaining input and releases keys
+PASS  Profile round trip and atomic backup
+PASS  Resolution profiles have separate validated paths
+PASS  Flat colored patch is rejected
+PASS  x64 native ABI sizes match Win32
+PASS  Early completion during held input releases keys and skips the remaining recording
+PASS  Already completed stage skips precondition and counts a reward only once
+PASS  Early completion advances to the next stage
+PASS  A single completion-image flicker does not skip the stage
+PASS  Disabling early detection preserves full recording playback
+PASS  Global target matching finds a translated and resized template
+PASS  Target matching rejects absent and ambiguous duplicate objects
+PASS  Target matching supports prompt cancellation
+PASS  Camera recenter clicks the middle button once and discards the pre-click bearing
+PASS  Missing target does not repeat camera recenter or walk blindly
+PASS  Cancellation during recenter releases the middle button
+PASS  Foreground loss during recenter releases the middle button and stops
+PASS  Completion while recentering releases the button and skips navigation
+PASS  Already completed navigation skips camera recenter
+PASS  Camera preparation defaults for older settings preserve explicit opt-outs
+PASS  Zoom-out precedes middle click and both require fresh target observations
+PASS  Zoom-out is bounded and never repeats when a target remains missing
+PASS  Cancellation and foreground loss interrupt zoom before the next wheel step
+PASS  Completion interrupts zoom and skips the later recenter click
+PASS  Arrival revealed after zoom skips recenter and stops without reward inputs
+PASS  Navigation aligns, approaches in a short pulse, and stops at two arrival frames
+PASS  Missing target never walks and bounded search fails without advancing
+PASS  Transient occlusion waits and resumes only after two fresh target observations
+PASS  Persistent loss uses bounded recovery toward the last bearing, including inverted controls
+PASS  Arrival during occlusion recovery stops without replaying reward inputs
+PASS  Already at the tree requires no movement
+PASS  Pitch alignment corrects high and low targets before walking, with inverted controls
+PASS  Pitch search samples above and below without cumulative drift or blind walking
+PASS  Disabling auto pitch keeps both search and tracking horizontal
+PASS  Unresponsive pitch stops at the correction limit without walking
+PASS  Pitch correction settles inside the comfort band before resuming movement
+PASS  Successful pitch alignment resets the failure counter across a long approach
+PASS  Larger tree coverage increases pitch correction at the same vertical error
+PASS  Repeated pitch correction speeds up but respects both size limits
+PASS  Disabling adaptive pitch preserves the configured gain and original cap
+PASS  Measured height progress can continue beyond sixteen corrections without premature walking
+PASS  Adaptive pitch reverses after overshoot and only walks once the height settles
+PASS  Established approach interleaves a bounded forward step after four pitch corrections
+PASS  Forward assistance is limited to three steps and never marks arrival on its own
+PASS  Arrival before an assisted step prevents extra forward input
+PASS  Missing or horizontally misaligned target cannot use forward assistance
+PASS  Cancellation during assisted movement releases W
+PASS  Arrival takes priority over a target requiring vertical correction
+PASS  Cancelling a forward pulse releases W
+PASS  Loss of target after a sighting cannot start forward movement
+PASS  Arrival action recording is separate from the old movement recording
+PASS  Engine navigates before playing only the separate arrival actions
+PASS  Completion during approach releases W immediately and stops navigation
+PASS  Old profiles migrate selected completion options while preserving recordings
+PASS  Fast approach uses longer pulses only for confident distant aligned targets
+PASS  Arrival seen during a fast pulse releases W and confirms with a fresh frame
+PASS  Fast approach requires a fresh matching target before each pulse
+PASS  Target loss or abrupt size change resets fast approach tracking
+PASS  Cancellation or focus loss during a fast pulse releases W
+PASS  Checkpoint recognition tolerates brightness shift and searches odd radii
+PASS  Tree matching includes the top and side edges
+PASS  Tree diagnostics explain a rejected high-threshold candidate
+PASS  Camera mouse routing ignores stale cursor bounds but menu clicks remain guarded
+PASS  Recognition profile migration relaxes defaults but preserves explicit tuning
+PASS  Visual alignment corrects direction and requires two aligned observations
+PASS  Missing alignment target stops within the search limit
+PASS  Completion and cancellation interrupt visual alignment
+PASS  Combat analysis isolates the rotation without changing the original recording
+PASS  Uncleared combat repeats only the rotation and advances only after stable clear
+PASS  Combat clear interrupts a held key even if legacy early-completion toggle is off
+PASS  Already-cleared combat skips the challenge trigger
+PASS  No clear at cycle limit stops before reward or navigation
+PASS  Combat deadline bounds long waits and releases every input
+PASS  Combat cancellation and focus loss both release held inputs
+PASS  Normal attack then middle-click precedes additional cycles and remains interruptible
+PASS  One transient clear frame cannot finish combat
+PASS  Combat ranges reject held boundaries, menus, and invalid intervals before input
+PASS  Rerecording and reset invalidate old combat ranges without losing completion on rerecord
+PASS  Old profiles retain recorded combat behavior and new settings round-trip
+PASS  Gold-text detection tolerates background changes and rejects missing or solid gold
+PASS  Experimental support order keeps the original damage tail and recording intact
+PASS  Experimental order rejects missing main damage and too-short cycle periods
+PASS  Engine waits after real first E, sends exactly one second E and shifts the following inputs
+PASS  Visual E confirmation waits 500ms plus stable party recovery before 3 and preserves delayed swap-to-E timing
+PASS  Clear detected during the party wait prevents the 3 swap
+PASS  Invalid party registration and sub-500ms motion waits fail before input
+PASS  Visual trigger images are validated before the engine sends any input
+PASS  Resuming an active fight skips opener F and waits for a confirmed clear
+PASS  Already cleared resumed fight sends no combat input
+PASS  Actual plunge release and confirmed fourth swap preserve timing before fourth E
+PASS  Fourth swap registration rejects missing and oversized keycaps before input
+PASS  Party numbers distinguish all four active slots and reject absent, multiple and globally dimmed HUDs
+PASS  Successful fourth swap needs fresh frames, no redundant retry, and minimum skill delay
+PASS  Ignored fourth swap retries only 4, then confirms before proceeding
+PASS  Unknown HUD and one-frame flashes never confirm fourth swap or cause blind retries
+PASS  Fourth swap retries are bounded and stop before any skill
+PASS  Clear, cancellation and focus loss interrupt fourth-swap retry and release held key
+PASS  Second E fallback waits 500ms from the actual first release
+PASS  Ready icon triggers E immediately and two cooldown frames confirm success
+PASS  Transient ready and cooldown frames cannot trigger or confirm the chain
+PASS  Ignored second E is retried only while its ready icon persists
+PASS  Missing cooldown stops after three bounded attempts
+PASS  A pre-existing cooldown cannot substitute for first-E readiness
+PASS  Lost icon does not cause blind retries
+PASS  Completion, cancellation and focus loss release E during visual confirmation
+PASS  Cooldown layout accepts 13.5 and single-digit decimals, rejects icon-like solid patches
+PASS  Combat resume waits through existing cooldown and distinguishes an already-ready second E
+PASS  Party gate waits at least 500ms then requires two fresh bright frames
+PASS  Party gate rejects a bright flash between dim frames
+PASS  Party gate timeout stops without sending a swap or skill
+PASS  Party gate timed-only mode still waits 500ms without image reads
+PASS  Completion, cancellation and focus loss interrupt the motion wait and image confirmation
+PASS  Bright party text survives background changes while dim and blank cards fail
+PASS  Manual resume keeps only remaining selected stages and preserves their round numbers
+PASS  Auto resume prioritizes clear and F arrival over common HUD matches
+PASS  Auto resume recognizes an active battle only through its dedicated image
+PASS  A reward screen in the last round skips retry and starts the selected next task
+PASS  Ambiguous auto matches remain separate candidates instead of guessing
+PASS  Final completion produces an empty remainder and invalid combat resumes are rejected
+PASS  Login clicks once before update, waits for stable door, then waits for field
+PASS  Starting at an already ready door sends only one entry click
+PASS  Already claimed Welkin and visible field produce no clicks
+PASS  Delayed Welkin interrupts field quiet period and is dismissed
+PASS  Starting from Welkin can finish login without reclicking the door
+PASS  Single door or popup flicker cannot trigger a click
+PASS  Update timeout stops without speculative clicks
+PASS  Cancellation during login click releases the mouse
+PASS  Loading releases movement, waits for positive ready UI, then resumes movement
+PASS  Loading never repeats held menu clicks or skills
+PASS  Domain HUD resumes two separate warps even without the outdoor Paimon icon
+PASS  Disappearing loading icons without a ready screen time out with no input
+PASS  Domain notice resumes loading with both outdoor and domain HUD hidden
+PASS  A flickering domain notice must become stable after loading disappears
+PASS  Domain entry replays its recorded dismiss click and movement after the notice
+PASS  Welkin popup is dismissed even when the field HUD remains visible behind it
+PASS  Loading cancellation releases all controls and never resumes movement
+PASS  Focus loss while waiting for loading fails closed and releases controls
+PASS  Engine pauses the timeline across loading instead of bursting later commands
+PASS  Screen login preserves its legacy recording and ignores its commands
+PASS  Resume detection prioritizes a login door and popup over generic matches
+PASS  Enabled screen login permits no legacy input recording
+PASS  Missing or malformed loading and Welkin registrations are rejected
+PASS  Profile round trip preserves screen flow and existing recording
+173 / 173 tests passed. No real game input was sent.

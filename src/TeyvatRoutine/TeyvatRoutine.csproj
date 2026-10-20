@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TargetPlatformMoniker>Windows,Version=7.0</TargetPlatformMoniker>
+    <TargetPlatformDisplayName>Windows</TargetPlatformDisplayName>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>TeyvatRoutine</AssemblyName>
+    <RootNamespace>TeyvatRoutine</RootNamespace>
+    <Version>0.15.2</Version>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RestoreIgnoreFailedSources>true</RestoreIgnoreFailedSources>
+    <!-- WPF owns DPI awareness through the manifest; WinForms is referenced for System.Drawing only. -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+  </PropertyGroup>
+  <ItemGroup><Resource Include="app.ico" /></ItemGroup>
+</Project>
+

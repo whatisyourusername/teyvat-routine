@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TeyvatRoutine/0.15.2": {
+        "runtime": {
+          "TeyvatRoutine.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TeyvatRoutine/0.15.2": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
